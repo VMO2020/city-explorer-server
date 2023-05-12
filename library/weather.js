@@ -5,6 +5,7 @@ const weather = async (req, res) => {
 
 	try {
 		const city = req.query.city || 'London'; // Default to 'London' if city is not provided
+		console.log(city);
 
 		// Make the fetch request to the API
 		const response = await fetch(
