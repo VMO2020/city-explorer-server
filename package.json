@@ -4,11 +4,11 @@
 	"description": "City Explorer API",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server",
-		"server": "nodemon server"
+		"start": "node server.js",
+		"server": "nodemon server.js"
 	},
 	"keywords": [],
-	"author": "VMOG",
+	"author": "vmog.net",
 	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
