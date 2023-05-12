@@ -13,7 +13,7 @@ const cors = require('cors');
 // This setting says that everyone is allowed to speak to our server
 app.use(cors());
 
-// library functions
+// Library functions
 const weather = require('./library/weather');
 const movies = require('./library/movies');
 const root = require('./library/root');
