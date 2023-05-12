@@ -8,10 +8,10 @@ const movies = async (req, res) => {
 	try {
 		const city = req.query.city || 'London'; // Default to 'London' if city is not provided
 
-		const response = await fetch(
+		const result = await fetch(
 			`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${city}&language=en&region=${city}`
 		);
-		const data = await response.json();
+		const data = await result.json();
 
 		// Return the data as the response
 		res.status(200).json(data);
