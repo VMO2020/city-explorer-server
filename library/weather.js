@@ -12,7 +12,7 @@ const weather = async (req, res) => {
 		// );
 		// const data = await response.json();
 
-		res.status(200).json(city);
+		res.status(200).json(API_KEY);
 		// res.status(200).json(data);
 	} catch (error) {
 		console.error(error);
