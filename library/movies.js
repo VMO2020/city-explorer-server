@@ -1,3 +1,4 @@
+const axios = require('axios');
 require('dotenv').config();
 
 const movies = async (req, res) => {
@@ -8,10 +9,10 @@ const movies = async (req, res) => {
 	try {
 		const city = req.query.city || 'London'; // Default to 'London' if city is not provided
 
-		const result = await fetch(
-			`https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${city}&language=en&region=${city}`
-		);
-		const data = await result.json();
+		const URL = `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&query=${city}&language=en&region=${city}`;
+
+		const result = await axios.get(URL);
+		const data = await result.data;
 
 		// Return the data as the response
 		res.status(200).json(data);
