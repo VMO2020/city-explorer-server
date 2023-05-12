@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const weather = async (req, res) => {
 	const API_KEY = process.env.API_KEY;
 

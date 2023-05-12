@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const movies = async (req, res) => {
 	const MOVIE_API_KEY = process.env.MOVIE_API_KEY;
 
