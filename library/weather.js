@@ -14,7 +14,7 @@ const weather = async (req, res) => {
 		res.status(200).json(data);
 	} catch (error) {
 		console.error(error);
-		res.status(404).json('Location not found');
+		res.status(404).json(error);
 	}
 };
 
